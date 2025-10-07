@@ -19,7 +19,7 @@ const Order = () => {
   const [orderTotal, setOrderTotal] = useState(0);
   const { queryOrder, paginationOrder } = useOrder();
   const { data: order, isLoading, isError, error, isSuccess } = queryOrder;
-  const socket = useMemo(() => io("https://rsts-vintage-shop-backend.onrender.com"), []);
+  const socket = useMemo(() => io("http://209.38.90.90"), []);
 
 
   useEffect(() => {

@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sidebar"
 import { menuItems } from "@/utils/Dummy";
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
+import { Link } from "react-router-dom";
 
 const SideLayout = () => {
 
@@ -35,10 +36,10 @@ const SideLayout = () => {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.text}>
                   <SidebarMenuButton asChild isActive={route === item.route ? true:false}>
-                    <a href={item.route} className="my-1 py-[20px]">
+                    <Link to={item.route} className="my-1 py-[20px]">
                       <img src={item.image} alt="sidebarImage" />
                       <span>{item.text}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
