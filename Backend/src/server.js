@@ -19,6 +19,11 @@ export const io = new Server(server,{
   }
 })
 
+// Socket.IO connection
+io.on("connection", (socket) => {
+  console.log("User connected:", socket.id);
+});
+
 //localhost
 const PORT = process.env.PORT || 8000;
 

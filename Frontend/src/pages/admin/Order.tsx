@@ -8,7 +8,7 @@ import { Table } from "@/components/ui/table";
 import { useOrder } from "@/hooks/useOrder";
 import { orderHeader } from "@/utils/Dummy";
 import { errorToastStyle } from "@/utils/Toast";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import {io} from 'socket.io-client';
 
@@ -19,7 +19,7 @@ const Order = () => {
   const [orderTotal, setOrderTotal] = useState(0);
   const { queryOrder, paginationOrder } = useOrder();
   const { data: order, isLoading, isError, error, isSuccess } = queryOrder;
-  const socket = useMemo(() => io("https://rstsvintageshop.com.au"), []);
+  const socket = io("https://rstsvintageshop.com.au");
 
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Order = () => {
     });
 
     return () => {
-      socket.off("newOrder");
+      socket.disconnect();
     };
 
   }, [isSuccess, order,socket]);
