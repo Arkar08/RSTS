@@ -16,7 +16,7 @@ const HomePage = () => {
   return (
     <div className="px-4 mt-2">
         <div className="w-full h-[400px] lg:h-[550px] md:h-[450px] ">
-          <img src="logoProfile.png" alt="logo"  className="w-full h-full object-cover rounded-md"/>
+          <img src="./Media (1).jpg" alt="logo"  className="w-full h-full object-center rounded-md"/>
         </div>
         <div>
           <CategoryUser />

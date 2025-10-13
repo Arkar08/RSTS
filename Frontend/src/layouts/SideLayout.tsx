@@ -10,11 +10,13 @@ import {
 } from "@/components/ui/sidebar"
 import { menuItems } from "@/utils/Dummy";
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const SideLayout = () => {
 
-     const route = window.location.pathname;
+    //  const route = window.location.pathname;
+    const location = useLocation()
+    const route = location.pathname;
      const {open} = useSidebar();
 
   return (

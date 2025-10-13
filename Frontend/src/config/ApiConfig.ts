@@ -5,7 +5,7 @@ const Axios = axios.create()
 // Axios.defaults.baseURL = "https://rsts-vintage-shop-backend.onrender.com/api/v1/"
 // Axios.defaults.baseURL = "http://localhost:8080/api/v1/"
 
-Axios.defaults.baseURL = "http://209.38.90.90/api/v1/"
+Axios.defaults.baseURL = "https://rstsvintageshop.com.au/api/v1/"
 
 
 Axios.interceptors.request.use((config)=>{

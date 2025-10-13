@@ -8,7 +8,6 @@ const Cancel = () => {
     const continueHome = () => {
         navigate('/cart')
     }
-
   return (
     <div className="h-screen flex justify-center items-center bg-gray-50 p-4">
       <div className="border-2 max-w-md w-full bg-white shadow rounded-md p-6 text-center">
