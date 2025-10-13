@@ -62,8 +62,8 @@ useEffect(() => {
         <DashboardCard background={"green"} title={"Products"} length={products?.totalItems ?? 0}/>
         <DashboardCard background={"black"} title={"Orders"} length={orders?.totalItems ?? 0}/>
       </div>
-      <div className="grid grid-cols-3 h-[calc(100vh-280px)] mt-8 gap-6">
-        <div className="rounded-md shadow-md p-2">
+      <div className="grid grid-cols-4 h-[calc(100vh-280px)] mt-8 gap-6">
+        <div className="rounded-md shadow-md p-1">
           <h3 className="text-center text-xl font-semibold">All Data</h3>
           <div className="w-[90%] mx-auto mt-8">
             { dummyData?.datasets?.[0]?.data?.length ? (
@@ -77,7 +77,13 @@ useEffect(() => {
 
           </div>
         </div>
-        <div className="rounded-md shadow-md p-2">
+        <div className="rounded-md shadow-md w-full p-1">
+          <h3 className="text-center text-xl font-semibold">Calendar</h3>
+          <Calendar className="w-[100%] mx-auto rounded-lg"  mode="single"
+            selected={date}
+            onSelect={setDate}/>
+        </div>
+        <div className="rounded-md shadow-md p-2 col-span-2">
           <h3 className="text-center text-xl font-semibold">Recent Orders</h3>
           <Table className="table-auto w-full mt-4">
           <TableHeading headers={recentOrderHeader}/>
@@ -96,12 +102,6 @@ useEffect(() => {
             <p className="text-xl">No Order found.</p>
           </div>
         )}
-        </div>
-        <div className="rounded-md shadow-md w-full p-2">
-          <h3 className="text-center text-xl font-semibold">Calendar</h3>
-          <Calendar className="w-[85%] mx-auto rounded-lg"  mode="single"
-            selected={date}
-            onSelect={setDate}/>
         </div>
       </div>
     </div>
