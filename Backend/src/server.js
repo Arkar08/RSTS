@@ -14,7 +14,7 @@ const server = http.createServer(app);
 //socket connected
 export const io = new Server(server,{
   cors:{
-    origin:"*",
+    origin:"https://rstsvintageshop.com.au",
     methods:['GET',"POST"]
   }
 })
