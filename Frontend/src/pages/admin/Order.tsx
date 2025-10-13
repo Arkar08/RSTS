@@ -19,7 +19,7 @@ const Order = () => {
   const [orderTotal, setOrderTotal] = useState(0);
   const { queryOrder, paginationOrder } = useOrder();
   const { data: order, isLoading, isError, error, isSuccess } = queryOrder;
-  const socket = io("https://rstsvintageshop.com.au");
+  const socket = io();
 
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const Order = () => {
     });
 
     return () => {
-      socket.disconnect();
+      socket.off("newOrder");
     };
 
   }, [isSuccess, order,socket]);
