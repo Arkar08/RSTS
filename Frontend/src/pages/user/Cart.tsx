@@ -272,15 +272,6 @@ const Cart = () => {
                   </div>
                   <div className="px-2">
                     <div className="mt-2">
-                      <InputFormField
-                        placeholder={"Enter Phone Number"}
-                        type={"number"}
-                        control={control}
-                        name={"phoneNumber"}
-                        label={"Phone Number"}
-                      />
-                    </div>
-                    <div className="mt-2">
                       <SelectFormField
                         control={control}
                         name="country"
@@ -288,6 +279,15 @@ const Cart = () => {
                         placeholder="Select Country"
                         categoryList={dummyCountry}
                       />
+                      <div className="mt-2">
+                        <InputFormField
+                          placeholder={"Enter Phone Number"}
+                          type={"number"}
+                          control={control}
+                          name={"phoneNumber"}
+                          label={"Phone Number"}
+                        />
+                      </div>
                     </div>
                     <div className="flex justify-between items-center pb-1 h-[40px] mt-2 px-2">
                       <h3 className="font-semibold ">Subtotal</h3>

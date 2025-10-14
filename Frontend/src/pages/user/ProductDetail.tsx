@@ -140,7 +140,7 @@ const ProductDetail = () => {
         relatedProducts.length > 0 && (
             <div className="py-4">
             <h3 className="font-semibold text-xl">Related Products</h3>
-            <div className="flex gap-4 mt-4 overflow-x-auto overflow-y-hidden">
+            <div className="flex gap-4 mt-4 overflow-x-auto overflow-y-hidden scrollbar-thin scrollbar-thumb-orange-400 scrollbar-track-gray-200">
               {relatedProducts.map((product,index) => (
                 <div className="min-w-[200px] mx-[25px]" key={index}>
                   <ProductListings product={product}/>

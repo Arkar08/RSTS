@@ -16,7 +16,7 @@ const ProductListings = ({ product }: any) => {
         <img
           src={product.images[0]}
           alt="cardImage"
-          className="w-full h-[200px] object-cover rounded-md"
+          className="w-full h-[180px] object-cover rounded-md"
         />
       </CardHeader>
       <CardContent className="px-2 py-0 m-0">

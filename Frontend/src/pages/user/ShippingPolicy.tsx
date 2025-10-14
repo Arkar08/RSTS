@@ -12,7 +12,7 @@ const ShippingPolicy = () => {
 
   return (
     <div className="p-4 md:h-[calc(100vh-265px)] sm:h-[100vh]">
-      <h3 className="text-2xl font-bold text-center">Shipping Policy (Australia Only)</h3>
+      <h3 className="text-2xl font-bold text-center">Shipping Policy</h3>
       <p className="text-center mt-1">
         We aim to get your item to you quickly, safely, and at no extra cost.
       </p>

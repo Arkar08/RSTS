@@ -22,7 +22,35 @@ const TrendingCard = ({product}:any) => {
       </CardHeader>
       <CardContent className="px-2 py-0 m-0">
         <p className="text-center text-sm">{product.name}</p>
-        <p className="text-center font-semibold text-gray-600 text-sm pt-1">$ {product.price} AUD</p>
+        {product.customerSalePrice > 0 ? (
+            <div className="flex justify-center items-center mt-1 gap-2">
+              <span
+                style={{
+                  color: "orangered",
+                  fontWeight: "bold",
+                  fontSize: "14px"
+                }}
+              >
+                $ {product?.customerSalePrice} AUD
+              </span>{" "}
+              <span
+                style={{
+                  textDecoration: "line-through",
+                  color: "gray",
+                  fontSize: "14px",
+                }}
+              >
+                $ {product.price} AUD
+              </span>
+            </div>
+          ) : (
+            <div className="flex justify-center items-center mt-1">
+              <span style={{ fontSize: "14px", fontWeight: "bold",color:'gray' }}>
+                $ {product.price} AUD
+              </span>
+            </div>
+          )}
+        {/* <p className="text-center font-semibold text-gray-600 text-sm pt-1">$ {product.price} AUD</p> */}
       </CardContent>
       <CardFooter className="px-2 absolute w-full  mx-auto bottom-2">
         {

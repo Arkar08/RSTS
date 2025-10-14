@@ -65,7 +65,7 @@ const CollectionPage = () => {
           <input type="text" placeholder="Search product" value={searchData} className="bg-gray-200 rounded-md w-full p-2 px-10 mt-2 outline-0" onChange={(event)=>searchInput(event)}/>
         </div>
       </div>
-       <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center mt-4 py-4">
+       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 place-items-center mt-4 py-4">
             {produtListing.length> 0 && produtListing.map((product, index) => (
               <ProductListings key={index} product={product}/>
             ))}

@@ -217,7 +217,7 @@ const CheckOutPage = () => {
       };
 
       const response = await fetch(
-        `https://rsts-vintage-shop-backend.onrender.com/api/v1/orders/capture-paypal-order/${data.orderID}`,
+        `https://rstsvintageshop.com.au/api/v1/orders/capture-paypal-order/${data.orderID}`,
         {
           method: "POST",
           headers: {
