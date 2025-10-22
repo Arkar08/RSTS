@@ -69,11 +69,14 @@ const Cart = () => {
     }
   }, [products, isSuccess]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let item1:any;
+
   const checkOutClick = () => {
     if (isAuth) {
       const greaterItems = cart.filter((item2) => {
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const item1: any = productList.find(
+        
+        item1 = productList.find(
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (item: any) => item._id === item2._id
         );
@@ -81,9 +84,10 @@ const Cart = () => {
       });
 
 
+
       if (greaterItems.length > 0) {
         toast(
-          `Insufficient stock for ${greaterItems[0].name}. Only ${greaterItems[0].quantity - 1} left. Please check your order. `,
+          `Insufficient stock for ${greaterItems[0].name}. Only ${item1.quantity} left. Please check your order. `,
           errorToastStyle
         );
       } else {
