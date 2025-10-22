@@ -5,7 +5,7 @@ import type { HeaderProps } from '@/utils/Constant'
 
 const Header = ({title,plusClick,searchInput,value}:HeaderProps) => {
   return (
-    <div className="h-[60px] border-2 rounded-md mt-2 flex justify-between items-center px-4 shadow-md">
+    <div className="h-[60px] border-2 rounded-md flex justify-between items-center px-4 shadow-md">
         <h3 className="text-xl">{title}</h3>
         {
             title === 'Orders' ? (

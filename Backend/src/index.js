@@ -4,6 +4,7 @@ import productRoute from "./routes/productRoute.js";
 import orderRoute from "./routes/orderRoute.js";
 import authRoute from "./routes/authRoute.js";
 import userRoute from './routes/userRoute.js';
+import advertisingRoute from './routes/advertisingRoute.js';
 import cors from "cors";
 
 //setup
@@ -21,5 +22,6 @@ app.use("/api/v1/users",userRoute)
 app.use("/api/v1/category", categoryRoute);
 app.use("/api/v1/products", productRoute);
 app.use("/api/v1/orders", orderRoute);
+app.use("/api/v1/advertising",advertisingRoute)
 
 export default app;

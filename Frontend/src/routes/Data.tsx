@@ -29,6 +29,9 @@ import ReturnPolicy from "@/pages/user/ReturnPolicy";
 import ShippingPolicy from "@/pages/user/ShippingPolicy";
 import CheckOutPage from "@/pages/user/CheckOutPage";
 import OrderSuccess from "@/pages/payment/OrderSuccess";
+import Advertising from "@/pages/admin/Advertising";
+import CreateAdvertising from "@/components/admin/CreateAdvertising";
+import UpdateAdvertising from "@/components/admin/UpdateAdvertising";
 
   const isAuth = !!localStorage.getItem("token")
 
@@ -44,6 +47,9 @@ const Data = [
       children: [
         { path: "dashboard", element: <Dashboard /> },
         { path: "user", element: <User /> },
+        {path:"advertising",element:<Advertising />},
+        {path:"advertising/create",element:<CreateAdvertising />},
+        {path:"advertising/:id",element:<UpdateAdvertising />},
         { path: "category", element: <Category /> },
         { path: "products", element: <Product /> },
         { path: "products/create", element: <CreateProduct /> },

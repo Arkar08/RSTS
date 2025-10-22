@@ -144,3 +144,12 @@ export type postPaginationProps = {
 export type searchProps = {
     search:string;
 }
+
+export type AdvertisingProps = {
+    _id:string;
+    title:string;
+}
+
+export type CreateAdvertisingProps = {
+    title:string;
+}

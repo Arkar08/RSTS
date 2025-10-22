@@ -45,7 +45,7 @@ const CategoryUser = () => {
     <div className="w-full bg-white shadow-sm rounded-md py-4 mt-4">
 
       <div className="w-full overflow-x-auto scrollbar-thin scrollbar-thumb-orange-400 scrollbar-track-gray-200">
-        <div className="flex items-center gap-6 px-6 py-2 h-[120px] min-w-max">
+        <div className="flex items-center md:justify-center lg:justify-center gap-6 px-6 py-2 h-[120px] min-w-max">
           {categoryLists.map((category: CategoryProps) => (
             <div
               key={category._id}

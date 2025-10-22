@@ -3,9 +3,17 @@ import { useNavigate } from "react-router-dom"
 
 const NotFound = () => {
 
+  const role = localStorage.getItem('role')
+  
   const navigate = useNavigate()
   const backToLogin = () => {
-    navigate("/auth/login")
+    if(role === 'Admin'){
+      navigate('/admin/dashboard')
+    }else if(role === 'User'){
+      navigate('/')
+    }else{
+      navigate("/auth/login")
+    }
   }
 
   return (

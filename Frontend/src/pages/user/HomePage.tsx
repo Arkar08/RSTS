@@ -1,7 +1,7 @@
 import CategoryUser from "@/components/user/CategoryUser";
 import NewProductList from "@/components/user/NewProductList";
 import ServiceUser from "@/components/user/ServiceUser";
-import TrendingProducts from "@/components/user/TrendingProducts";
+// import TrendingProducts from "@/components/user/TrendingProducts";
 import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -20,7 +20,7 @@ const HomePage = () => {
         </div>
         <div>
           <CategoryUser />
-          <TrendingProducts />
+          {/* <TrendingProducts /> */}
           <ServiceUser />
           <NewProductList />
         </div>

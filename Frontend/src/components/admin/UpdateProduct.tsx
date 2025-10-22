@@ -165,6 +165,11 @@ const UpdateProduct = () => {
     return <Loading />;
   }
 
+  const handleRemoveImage = (url: string) => {
+    const newImages = images.filter((image) => image !== url);
+    setImages(newImages);
+  };
+
   return (
     <div>
       <div className="h-[60px] border-2 rounded-md mt-1 flex justify-between items-center px-4 shadow-md">
@@ -272,7 +277,7 @@ const UpdateProduct = () => {
                       className="relative w-[120px] h-[120px] overflow-hidden shadow rounded-md"
                     >
                       <CircleX
-                        // onClick={() => handleRemoveImage(url)}
+                        onClick={() => handleRemoveImage(url)}
                         className="cursor-pointer absolute top-1 right-1 text-gray-500   hover:text-red-500  transition"
                       />
                       <img

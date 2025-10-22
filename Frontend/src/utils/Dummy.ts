@@ -1,4 +1,4 @@
-import type { MenuItemProps } from "./Constant";
+import type { AdvertisingProps, MenuItemProps } from "./Constant";
 
 export const menuItems: MenuItemProps[] = [
   {
@@ -10,6 +10,11 @@ export const menuItems: MenuItemProps[] = [
     route:"/admin/user",
     text:"User Listings",
     image:"/user (2).png"
+  },
+  {
+    route:'/admin/advertising',
+    text:"Advertising",
+    image:"/digital-ads-icon.png"
   },
   {
     route: "/admin/category",
@@ -56,6 +61,8 @@ export const navItems = [
 // ];
 
 export const categoryHeader: string[] = ["Image", "Name", "Action"];
+
+export const advertisingHeader:string[] = ['Id','Title','Action'];
 
 export const userHeader:string[] = ["Name","Email","Phone Number","Role","Is Active"]
 
@@ -176,6 +183,13 @@ export const categoryBody = [
     name: "Rings",
   },
 ];
+
+export const advertisingListing:AdvertisingProps[] = [
+  {
+    _id:'1',
+    title:"title"
+  }
+]
 
 // export const productBody:ProductProps[] = [
 //     {
