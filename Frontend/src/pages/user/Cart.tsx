@@ -83,7 +83,7 @@ const Cart = () => {
 
       if (greaterItems.length > 0) {
         toast(
-          `Insufficient stock for ${greaterItems[0].name}. Only ${greaterItems[0].quantity} left. Please check your order. `,
+          `Insufficient stock for ${greaterItems[0].name}. Only ${greaterItems[0].quantity - 1} left. Please check your order. `,
           errorToastStyle
         );
       } else {
