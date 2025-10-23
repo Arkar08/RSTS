@@ -85,7 +85,7 @@ const Footer = () => {
                   className="w-[30px] h-[30px] bg-white rounded-full"
                 />
               </a>
-              <a href="https://teams.live.com/l/message/19:29269030e9d9fb22d05f7f018736ac5debbf91358db118439cbef44fa09f8347@oneToOne.skype/1761202292999?context=%7B%22contextType%22%3A%22chat%22%7D">
+              <a href="https://wa.me/61493385869">
                 <img
                   src="social.png"
                   alt="social"
